@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.fivehundred {
+    width: 500px;
+    height: 500px;
+    background-color: cornflowerblue;
+    margin: 12px auto;
+    overflow: visible;
+}
+
+.fivehundred>div div {
+    margin-right: 100px;
+    margin-bottom: 100px;
+    float: left;
+    width: 100px;
+    height: 100px;
+    background-image: url('');
+    background-size: cover;
+    border: 1px dashed black;
+}
+
+.fivehundred>div {
+    margin: 0px;
+    padding: 0px;
+}
+
+.fivehundred>div div:nth-child(3) {
+    margin-right: 0px;
+}

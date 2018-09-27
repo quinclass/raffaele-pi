@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    display: flex;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.fivehundred {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    background-color: cornflowerblue;
+}
+
+.fivehundred>div {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.fivehundred>div div {
+    width: 100px;
+    height: 100px;
+    background-image: url('');
+    background-size: cover;
+    border: 1px dashed black;
+}

@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+img {
+    max-width: 6rem !important;
+    background-size: cover;
+}
+
+body {
+    display: flex;
+    flex: 100%;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+article{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-content: space-around;
+    padding: 2rem;
+    width: 40%;
+}
