@@ -9,7 +9,7 @@
     <style>
     * {
             margin:0px;
-            padding:0;
+            padding:0px;
             font-family: 'Droid Sans Mono';font-size: 22px;
         }
         html, body, section {
@@ -21,11 +21,11 @@
             align-content: center;
         }
         body {
-            flex-flow: column nowrap;
+            flex-flow: row nowrap;
             width: 70%;
-            height:50%;
-            min-width: 300px;
-            min-height: 350px;    
+            height: 50%;
+            min-width: 640px;
+            min-height: 480px;    
         }
         section { flex-flow: column nowrap; }
         button {
@@ -36,36 +36,48 @@
         }
         button[clearscreen] { background-color: palevioletred; }
         button[compute]{ background-color:palegreen; min-width: 200px; }
+        #history {
+            overflow-y: scroll;
+            overflow-x: hidden;
+            border: 1px solid cadetblue;
+            border-radius: 5px;
+        }
+        #history p { font-size: 14px; }
+
     </style>
 </head>
 <body>
-    <section><p id="screen">calcolatrice</p></section>
-    <section>
-        <div>
-            <button onclick="document.getElementById('screen').innerText+=1" class="number">1</button>
-            <button onclick="document.getElementById('screen').innerText+=2" class="number">2</button>
-            <button onclick="document.getElementById('screen').innerText+=3"  class="number">3</button>
-            <button onclick="operator_plus()" class="operator">+</button>
-        </div>
-        <div>
-            <button onclick="document.getElementById('screen').innerText+=4" class="number">4</button>
-            <button onclick="document.getElementById('screen').innerText+=5" class="number">5</button>
-            <button onclick="document.getElementById('screen').innerText+=6"  class="number">6</button>
-            <button onclick="operator_minus()" class="operator">-</button>
-        </div>
-        <div>
-            <button onclick="document.getElementById('screen').innerText+=7" class="number">7</button>
-            <button onclick="document.getElementById('screen').innerText+=8" class="number">8</button>
-            <button onclick="document.getElementById('screen').innerText+=9"  class="number">9</button>
-            <button onclick="operator_mul()" class="operator">x</button>
-        </div>
-        <div>
-            <button onclick="operator_clear()"  class="number" clearscreen>C</button>
-            <button onclick="document.getElementById('screen').innerText+=0" class="number">0</button>
-            <button onclick="operator_dot()" class="number">.</button>
-            <button onclick="operator_divide()" class="operator">:</button>
-        </div>
-        <button onclick="operator_equal()" class="operator" compute>=</button>
+    <section> 
+        <section><p id="screen">calcolatrice</p></section>
+        <section>
+            <div>
+                <button onclick="document.getElementById('screen').innerText+=1" class="number">1</button>
+                <button onclick="document.getElementById('screen').innerText+=2" class="number">2</button>
+                <button onclick="document.getElementById('screen').innerText+=3"  class="number">3</button>
+                <button onclick="operator_plus()" class="operator">+</button>
+            </div>
+            <div>
+                <button onclick="document.getElementById('screen').innerText+=4" class="number">4</button>
+                <button onclick="document.getElementById('screen').innerText+=5" class="number">5</button>
+                <button onclick="document.getElementById('screen').innerText+=6"  class="number">6</button>
+                <button onclick="operator_minus()" class="operator">-</button>
+            </div>
+            <div>
+                <button onclick="document.getElementById('screen').innerText+=7" class="number">7</button>
+                <button onclick="document.getElementById('screen').innerText+=8" class="number">8</button>
+                <button onclick="document.getElementById('screen').innerText+=9"  class="number">9</button>
+                <button onclick="operator_mul()" class="operator">x</button>
+            </div>
+            <div>
+                <button onclick="operator_clean()"  class="number" clearscreen>C</button>
+                <button onclick="document.getElementById('screen').innerText+=0" class="number">0</button>
+                <button onclick="operator_dot()" class="number">.</button>
+                <button onclick="operator_divide()" class="operator">:</button>
+            </div>
+            <button onclick="operator_equal()" class="operator" compute>=</button>
+        </section>
+    </section>
+    <section id="history">
     </section>
 </body>
 </html> 
