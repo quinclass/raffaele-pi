@@ -122,14 +122,17 @@ function pushtodb(st, nd, op, res) {
 
 
 function history() {
-    fetch(new Request("http://localhost:3000/results"))
-        .then(function (response) { if (response.ok) return response.json(); })
-        .then(function (results) {
-            document.getElementById("history").innerHTML = "";
-            for (element in JSON.stringify(results, null, 2)) {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+            var elements = JSON.parse(this.responseText);
+            for(var i=0;i<elements.length;i++){
                 let p = document.createElement("p");
-                p.innerText = element['first'] + " " + element['operator'] + " " + element['second'] + " = " + element['result'];
+                p.innerText = elements[i].first + " " + elements[i].operator + " " + elements[i].second + " = " + element[i].result;
                 document.getElementById("history").appendChild(p);
             }
-        });
+        }
+    };
+    xmlhttp.open("GET", "http://localhost:3000/results", true);
+    xmlhttp.send();
 }

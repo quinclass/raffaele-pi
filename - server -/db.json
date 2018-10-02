@@ -111,6 +111,48 @@
       "operator": "+",
       "result": "2",
       "id": 16
+    },
+    {
+      "first": "12",
+      "second": "1",
+      "operator": "+",
+      "result": "13",
+      "id": 17
+    },
+    {
+      "first": "13",
+      "second": "2",
+      "operator": "+",
+      "result": "15",
+      "id": 18
+    },
+    {
+      "first": "15",
+      "second": "4",
+      "operator": "x",
+      "result": "60",
+      "id": 19
+    },
+    {
+      "first": "1",
+      "second": "1",
+      "operator": "+",
+      "result": "2",
+      "id": 20
+    },
+    {
+      "first": "",
+      "second": "1",
+      "operator": "",
+      "result": "1",
+      "id": 21
+    },
+    {
+      "first": "",
+      "second": "1",
+      "operator": "",
+      "result": "1",
+      "id": 22
     }
   ]
 }
