@@ -1,0 +1,30 @@
+$colors : (danger:red, normal:black, warning: yellow, success:green);
+
+@each $name, $color in $colors{
+    .text-#{$name} {
+        color: $color;
+    }
+}
+
+@each $name, $color in $colors{
+    .btn-#{$name} {
+        background-color: $color;
+        border:2px solid darken($color,20%);
+        
+        @if lightness($color)<50%{
+            color: white;
+            border:2px solid lighten($color,20%);
+        }
+    }
+}
+
+@for $i from 1 to 5 {
+    .btn-#{$i} {
+        width: $i * 50px;
+        height: $i * 20px;
+    }
+}
+
+[class|="btn"]{
+    border-radius: 4px;
+}
