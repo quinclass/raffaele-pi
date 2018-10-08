@@ -16,8 +16,7 @@ import it.quin.resttest.dto.BookDTO;
 public class BookResource {
 	
 	@GET
-	@Produces(MediaType.APPLICATION_JSON)
-	
+	@Produces(MediaType.APPLICATION_JSON)	
 	public List<BookDTO> getBooks() {
 		//return Response.ok().entity("Hello World").build();
 		return Arrays.asList(new BookDTO().testAdd("titolo di prova 1"), new BookDTO().testAdd("titolo di prova 2"));
