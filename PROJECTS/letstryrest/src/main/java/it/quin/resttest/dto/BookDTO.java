@@ -2,10 +2,10 @@ package it.quin.resttest.dto;
 
 
 public class BookDTO {
-	private String isbn;
+	private String ISBN;
 	private String Title;
-	private AuthorDTO author;
-	private PubDTO	publisher;
+	private String author;
+	private String publisher;
 	
 	public BookDTO() {}
 	
@@ -21,21 +21,21 @@ public class BookDTO {
 		Title = title;
 	}
 	public String getIsbn() {
-		return isbn;
+		return ISBN;
 	}
 	public void setIsbn(String isbn) {
-		this.isbn = isbn;
+		this.ISBN = isbn;
 	}
-	public AuthorDTO getAuthor() {
+	public String getAuthor() {
 		return author;
 	}
-	public void setAuthor(AuthorDTO author) {
+	public void setAuthor(String author) {
 		this.author = author;
 	}
-	public PubDTO getPublisher() {
+	public String getPublisher() {
 		return publisher;
 	}
-	public void setPublisher(PubDTO publisher) {
+	public void setPublisher(String publisher) {
 		this.publisher = publisher;
 	}
 	
